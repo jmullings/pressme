@@ -28,24 +28,25 @@ if(isset($_FILES['text'])){
     }
 
     if(empty($errors)==true){
-        $pressMe = new pressme();
-
-        $file = preg_replace('/(\\.\\d+\\.)/', '.', $file_name);
-        if ($file_name == $file)
-        $data = $pressMe->fileCompressor($file_name);
-        else{
-            $data = $pressMe->fileDecompressor($file_name);
-        }
-        if (file_exists($data['filename'])) {
-            header('Content-Description: File Transfer');
-            header('Content-Type: application/octet-stream');
-            header('Content-Disposition: attachment; filename="'.basename($data['filename']).'"');
-            header('Expires: 0');
-            header('Cache-Control: must-revalidate');
-            header('Pragma: public');
-            header('Content-Length: ' . filesize($data['filename']));
-            readfile($data['filename']);
-            exit;
+        if(move_uploaded_file($file_tmp,"files/".$file_name)){
+            $pressMe = new pressme();
+            $file = preg_replace('/(\\.\\d+\\.)/', '.', $file_name);
+            if ($file_name == $file)
+                $data = $pressMe->fileCompressor($file_name);
+            else{
+                $data = $pressMe->fileDecompressor($file_name);
+            }
+            if (file_exists($data['filename'])) {
+                header('Content-Description: File Transfer');
+                header('Content-Type: application/octet-stream');
+                header('Content-Disposition: attachment; filename="'.basename($data['filename']).'"');
+                header('Expires: 0');
+                header('Cache-Control: must-revalidate');
+                header('Pragma: public');
+                header('Content-Length: ' . filesize($data['filename']));
+                readfile($data['filename']);
+                exit;
+            }
         }
     }else{
         print_r($errors);
