@@ -10,10 +10,11 @@ require __DIR__ . '/../src/pressme.php';
 if(isset($_FILES['text'])||isset($_FILES['zip'])){
     $errors= array();
     $file_name = $_FILES['text']['name'] || $_FILES['zip']['name'];
-    $file_size =$_FILES['text']['size'] || $_FILES['zip']['size'];;
+    $file_size =$_FILES['text']['size'] || $_FILES['zip']['size'];
     $file_tmp =$_FILES['text']['tmp_name'] || $_FILES['zip']['tmp_name'];
-    $file_type=$_FILES['text']['type'] ||  $_FILES['zip']['type'];;
-    $file_ext=strtolower(end(explode('.',$_FILES['text']['name'] || $_FILES['zip']['name'])));
+    $file_type=$_FILES['text']['type'] ||  $_FILES['zip']['type'];
+    $file_ext=  $_FILES['text']['name'] || $_FILES['zip']['name'];
+    $file_ext=strtolower(end(explode('.',$file_ext)));
 
     $expensions= array("txt");
 
@@ -59,6 +60,8 @@ if(isset($_FILES['text'])||isset($_FILES['zip'])){
     <input type="submit"/>
 </form>
 <?php
+
+
 if(isset($_FILES['text']))
     print_r($data)
 ?>
