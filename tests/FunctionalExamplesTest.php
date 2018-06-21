@@ -1,5 +1,10 @@
 <?php
 
+require __DIR__ . '/../vendor/autoload.php';
+use PHPUnit\Framework\TestCase;
+
+
+
 class FunctionalExamplesTest extends TestCase
 {
     public function setUp()

@@ -6,7 +6,10 @@
         "silex/silex": "^2.0.4",
         "monolog/monolog": "^1.22",
         "twig/twig": "^2.0",
-        "symfony/twig-bridge": "^3"
+        "symfony/twig-bridge": "^3",
+        "clue/zlib-react": "^0.2.1",
+        "vich/uploader-bundle": "^1.8",
+        "phpunit/phpunit": "^7.2"
     },
     "require-dev": {
         "heroku/heroku-buildpack-php": "*"

@@ -1,13 +1,14 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+//require __DIR__ . '/../src/pressme.php';
+//
+//$pressMe = new pressme();
+//
+//$compressor = $pressMe->fileCompressor('text.txt');
+//
+//var_dump($compressor);
+//
+for ($i=1;$i<=1000;$i++)
+    echo ['fizz'][$i%3].['bazz'][$i%5]." ";
 
-$loop = React\EventLoop\Factory::create();
 
-$in = new React\Stream\ReadableResourceStream(STDIN, $loop);
-$out = new React\Stream\WritableResourceStream(STDOUT, $loop);
-
-$compressor = Clue\React\Zlib\ZlibFilterStream::createGzipCompressor(1);
-$in->pipe($compressor)->pipe($out);
-
-$loop->run();

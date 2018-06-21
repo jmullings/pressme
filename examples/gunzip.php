@@ -1,17 +1,9 @@
 <?php
 
-require __DIR__ . '/../vendor/autoload.php';
+require __DIR__ . '/../src/pressme.php';
 
-$loop = React\EventLoop\Factory::create();
+$pressMe = new pressme();
 
-$in = new React\Stream\ReadableResourceStream(STDIN, $loop);
-$out = new React\Stream\WritableResourceStream(STDOUT, $loop);
+$decompress = $pressMe->fileDecompressor('text.1529585704.txt');
 
-$decompressor = Clue\React\Zlib\ZlibFilterStream::createGzipDecompressor();
-$in->pipe($decompressor)->pipe($out);
-
-$decompressor->on('error', function ($e) {
-    fwrite(STDERR, 'Error: ' . $e->getMessage() . PHP_EOL);
-});
-
-$loop->run();
+var_dump($decompress);
