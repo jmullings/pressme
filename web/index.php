@@ -6,14 +6,15 @@
  * Time: 5:01 PM
  */
 require __DIR__ . '/../src/pressme.php';
+$file_name = '';
 
-if(isset($_FILES['text'])||isset($_FILES['zip'])){
+if(isset($_FILES['text'])){
     $errors= array();
-    $file_name = $_FILES['text']['name'] || $_FILES['zip']['name'];
-    $file_size =$_FILES['text']['size'] || $_FILES['zip']['size'];
-    $file_tmp =$_FILES['text']['tmp_name'] || $_FILES['zip']['tmp_name'];
-    $file_type=$_FILES['text']['type'] ||  $_FILES['zip']['type'];
-    $file_ext=  $_FILES['text']['name'] || $_FILES['zip']['name'];
+    $file_name = $_FILES['text']['name'];
+    $file_size =$_FILES['text']['size'];
+    $file_tmp =$_FILES['text']['tmp_name'];
+    $file_type=$_FILES['text']['type'];
+    $file_ext=  $_FILES['text']['name'];
     $file_ext=strtolower(end(explode('.',$file_ext)));
 
     $expensions= array("txt");
@@ -28,9 +29,11 @@ if(isset($_FILES['text'])||isset($_FILES['zip'])){
 
     if(empty($errors)==true){
         $pressMe = new pressme();
-        if(isset($_FILES['text']))
+
+        $file = preg_replace('/(\\.\\d+\\.)/', '.', $file_name);
+        if ($file_name == $file)
         $data = $pressMe->fileCompressor($file_name);
-        if(isset($_FILES['zip'])){
+        else{
             $data = $pressMe->fileDecompressor($file_name);
         }
         if (file_exists($data['filename'])) {
@@ -60,20 +63,18 @@ if(isset($_FILES['text'])||isset($_FILES['zip'])){
     <input type="submit"/>
 </form>
 <?php
-
-
-if(isset($_FILES['text']))
+if ($file_name == $file)
     print_r($data)
 ?>
 <hr />
 <h2>Decompress File</h2>
 <br /><br />
 <form action="" method="POST" enctype="multipart/form-data">
-    <input type="file" name="zip" />
+    <input type="file" name="text" />
     <input type="submit"/>
 </form>
 <?php
-if(isset($_FILES['zip']))
+if ($file_name !== $file)
     print_r($data)
 ?>
 <hr />
