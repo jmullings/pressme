@@ -36,15 +36,16 @@ if(isset($_FILES['text'])){
             else{
                 $data = $pressMe->fileDecompressor($file_name);
             }
-            if (file_exists("files/".$data['filename'])) {
+            $converted = "files/".$data['filename'];
+            if (file_exists($converted)) {
                 header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
-                header('Content-Disposition: attachment; filename="'.$data['filename'].'"');
+                header('Content-Disposition: attachment; filename="'.basename($converted).'"');
                 header('Expires: 0');
                 header('Cache-Control: must-revalidate');
                 header('Pragma: public');
-                header('Content-Length: files/' . filesize($data['filename']));
-                readfile("files/".$data['filename']);
+                header('Content-Length: ' . filesize($converted));
+                readfile($converted);
                 exit;
             }
         }
