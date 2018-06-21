@@ -36,15 +36,15 @@ if(isset($_FILES['text'])){
             else{
                 $data = $pressMe->fileDecompressor($file_name);
             }
-            if (file_exists($data['filename'])) {
+            if (file_exists("files/".$data['filename'])) {
                 header('Content-Description: File Transfer');
                 header('Content-Type: application/octet-stream');
-                header('Content-Disposition: attachment; filename="'.basename($data['filename']).'"');
+                header('Content-Disposition: attachment; filename="'.$data['filename'].'"');
                 header('Expires: 0');
                 header('Cache-Control: must-revalidate');
                 header('Pragma: public');
-                header('Content-Length: ' . filesize($data['filename']));
-                readfile($data['filename']);
+                header('Content-Length: files/' . filesize($data['filename']));
+                readfile("files/".$data['filename']);
                 exit;
             }
         }
@@ -52,23 +52,11 @@ if(isset($_FILES['text'])){
         print_r($errors);
     }
 }
-
 ?>
 <html>
 <body>
 <br />
-<h2>Compress File</h2>
-<br /><br />
-<form action="" method="POST" enctype="multipart/form-data">
-    <input type="file" name="text" />
-    <input type="submit"/>
-</form>
-<?php
-if ($file_name == $file)
-    print_r($data)
-?>
-<hr />
-<h2>Decompress File</h2>
+<h2>Decompress / Compress File</h2>
 <br /><br />
 <form action="" method="POST" enctype="multipart/form-data">
     <input type="file" name="text" />
