@@ -1,1 +1,1 @@
-web: vendor/bin/pressme web/
+web: web/
