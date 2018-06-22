@@ -2,21 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56149916-993a-4e9d-9f5f-a935f731f91b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/files/text.1529603706.txt" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/TransformStreamTest.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/bootstrap.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/fixtures/empty.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/tests/fixtures/helloworld.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/access.log.gz" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/favicon.png" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/images/lang-logo.png" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/gunzip.php" afterPath="$PROJECT_DIR$/examples/gunzip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/gzip.php" afterPath="$PROJECT_DIR$/examples/gzip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpunit.xml.dist" afterPath="$PROJECT_DIR$/phpunit.xml.dist" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/FunctionalExamplesTest.php" afterPath="$PROJECT_DIR$/tests/FunctionalExamplesTest.php" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -379,12 +365,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529564579683</updated>
       <workItem from="1529564584908" duration="33911000" />
-      <workItem from="1529627673494" duration="616000" />
+      <workItem from="1529627673494" duration="809000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="34527000" />
+    <option name="totallyTimeSpent" value="34720000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="720" extended-state="6" />
