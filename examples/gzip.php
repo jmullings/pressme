@@ -7,5 +7,4 @@ $pressMe = new pressme();
 
 $compressor = $pressMe->fileCompressor('text.txt');
 
-print_r($compressor);
-
+print_r(serialize($compressor));

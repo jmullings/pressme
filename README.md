@@ -53,7 +53,7 @@ $ composer install
 To run the test suite, go to the project root and run:
 
 ```bash
-$ php vendor/bin/phpunit
+$ ./vendor/bin/phpunit --debug --bootstrap vendor/autoload.php
 ```
 
 ## License

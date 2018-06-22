@@ -2,6 +2,10 @@
 require __DIR__ . '/../vendor/autoload.php';
 use PHPUnit\Framework\TestCase;
 
+/**
+ * Class FunctionalExamplesTest
+ * basic function test for example response
+ */
 class FunctionalExamplesTest extends TestCase
 {
     public function setUp()
@@ -12,18 +16,19 @@ class FunctionalExamplesTest extends TestCase
     {
 
         chdir(__DIR__ . '/../examples');
-        $out = exec('echo php gzip.php');
-        $this->assertEquals($out, $out);
+        $out = unserialize(shell_exec('./gzip.php'));
+        print_r($out);
+        $this->assertEquals(preg_replace('/(\\.\\d+\\.)/', '.', $out['filename']) , 'text.txt');
     }
 
     public function testGunzip()
     {
 
-        chdir(__DIR__ . '/../examples');
-        $out = exec('echo php gunzip.php');
-
+        chdir(__DIR__ . '/../examples');//
+        $out = unserialize(shell_exec('./gunzip.php'));
         print_r($out);
-        $this->assertEquals($out, $out);
+        $this->assertEquals($out['filename'] , 'text.txt');
+
     }
 
 }

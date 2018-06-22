@@ -55,6 +55,9 @@ if(isset($_FILES['text'])){
 }
 ?>
 <html>
+<header>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/main.css" />
+</header>
 <body>
 <br />
 <h2>Decompress / Compress File</h2>
