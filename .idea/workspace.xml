@@ -2,19 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="56149916-993a-4e9d-9f5f-a935f731f91b" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/CHANGELOG.md" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/views/header.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/views/index.twig" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/views/layout.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/views/nav.html" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/gunzip.php" afterPath="$PROJECT_DIR$/examples/gunzip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/gzip.php" afterPath="$PROJECT_DIR$/examples/gzip.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/FunctionalExamplesTest.php" afterPath="$PROJECT_DIR$/tests/FunctionalExamplesTest.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.php" afterPath="$PROJECT_DIR$/web/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/stylesheets/main.css" afterPath="$PROJECT_DIR$/web/stylesheets/main.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -456,12 +444,12 @@
       <option name="presentableId" value="Default" />
       <updated>1529564579683</updated>
       <workItem from="1529564584908" duration="33911000" />
-      <workItem from="1529627673494" duration="3513000" />
+      <workItem from="1529627673494" duration="3883000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37424000" />
+    <option name="totallyTimeSpent" value="37794000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="9" y="40" width="1280" height="720" extended-state="0" />
